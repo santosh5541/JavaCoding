@@ -18,6 +18,17 @@ public class Main {
     for (Map.Entry<String,Integer>entry: courseMap.entrySet()){
       System.out.println(entry.getValue());
       System.out.println(entry.getKey());
+
+      courseMap.forEach((key,value)->{
+        System.out.println("key is "+key+" value is "+value);
+      });
+
+      //use stream API
+
+      courseMap.entrySet().forEach(stringIntegerEntry -> {
+        System.out.println(stringIntegerEntry.getValue());
+        System.out.println(stringIntegerEntry.getKey());
+      });
     }
   }
 }
